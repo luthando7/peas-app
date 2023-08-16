@@ -1,0 +1,7 @@
+{
+  "name": "peas-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
