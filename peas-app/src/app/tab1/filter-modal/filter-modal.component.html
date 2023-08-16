@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Filter Options</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-radio-group [(ngModel)]="selectedCategory" (ngModelChange)="onCategoryChange()">
+      <ion-item *ngFor="let category of uniqueCategories">
+        <ion-label>{{ category }}</ion-label>
+        <ion-radio [value]="category"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <ion-button expand="full" (click)="closeModal()">Apply Filter</ion-button>
+</ion-content>
+
+
+

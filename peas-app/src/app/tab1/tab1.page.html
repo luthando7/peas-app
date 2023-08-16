@@ -1,17 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title>home</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openFilterModal()">
+        <ion-icon slot="icon-only" name="funnel-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card *ngFor="let item of filteredItems">
+    <ion-card-header>
+      <ion-card-subtitle>{{ item.category }}</ion-card-subtitle>
+      <ion-card-title>{{ item.name }}</ion-card-title>
+    </ion-card-header>
+    
+    <ion-item>
+      <ion-checkbox [checked]="item.checked" (ionChange)="onCheckboxChange(item)" justify="space-between">Got it</ion-checkbox>
+    </ion-item>
+  </ion-card>
 </ion-content>
