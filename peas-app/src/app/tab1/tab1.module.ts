@@ -6,7 +6,6 @@ import { Tab1Page } from './tab1.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
-import { ItemsComponent } from './items/items.component';
 import { FilterModalComponent } from './filter-modal/filter-modal.component';
 
 @NgModule({
@@ -17,6 +16,6 @@ import { FilterModalComponent } from './filter-modal/filter-modal.component';
     ExploreContainerComponentModule,
     Tab1PageRoutingModule,
   ],
-  declarations: [Tab1Page, ItemsComponent, FilterModalComponent]
+  declarations: [Tab1Page, FilterModalComponent]
 })
 export class Tab1PageModule {}
